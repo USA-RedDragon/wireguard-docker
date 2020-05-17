@@ -9,7 +9,6 @@ RUN wget -O /bin/wg-quick $WG_QUICK_URL \
 COPY docker-entrypoint.sh /usr/bin/
 
 VOLUME ["/etc/wireguard"]
-EXPOSE 38945/udp
+EXPOSE 51820/udp
 
-ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["wg-quick", "up", "wg0"]
